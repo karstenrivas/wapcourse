@@ -19,6 +19,35 @@ li {
   font-style: italic;
 }
 
+ol > li {
+  font-weight: bold;
+}
+
+dl {
+  font-weight: normal;
+}
 p {
   font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+p::first-letter {
+  font-size: 1.5em;
+}
+dt {
+  color: cyan;
+}
+dd {
+  color: ghostwhite;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
 }
