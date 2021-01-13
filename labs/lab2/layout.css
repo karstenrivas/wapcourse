@@ -8,7 +8,7 @@ body {
 main {
   border: 10px solid white;
 }
-section {
+.journal {
   margin-left: 25%;
 }
 aside {
@@ -25,14 +25,14 @@ a {
   color: cadetblue;
 }
 
-aside h1 {
+aside h2 {
   margin-left: 5px;
   margin-bottom: 5px;
 }
 
 aside ul {
-  margin: 0;
-  padding-left: 20;
+  margin: 0px;
+  padding-left: 20px;
 }
 header {
   background-color: #a8f0f0;
