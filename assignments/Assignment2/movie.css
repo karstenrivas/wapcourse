@@ -2,7 +2,7 @@ body {
   background-image: url('skeleton_files/background.png');
   font-size: 8pt;
   font-family: Verdana, Tahoma, sans-serif;
-  margin: 10px;
+  margin: 0px;
   padding: 0px;
   text-align: center;
 }
