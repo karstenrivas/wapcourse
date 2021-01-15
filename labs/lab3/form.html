@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form>
+        First name<br />
+        <input type="text" name="first-name" pattern="\D{2,}" required />
+        Middle name (optional)<br />
+        <input type="text" name="middle-name" pattern="\D{2,}" />
+        Last name<br />
+        <input type="text" name="last-name" pattern="\D{2,}" required />
+        SSN<br />
+        <input type="text" name="ssn" pattern="\d{3}-?\d{2}-?\d{4}" required />
+        Credit card<br />
+        <input type="text" name="credit-card" pattern="\d{13,19}" required />
+        Residential address line 1<br />
+        <input type="text" name="address-line-1" required />
+
+        <div>
+            City<br>
+            <input class="address" name="city" pattern="\D{2,}" type="text" required />
+        </div>
+        <div>
+            State<br>
+            <select class="address" name="state" required>
+                <option value="">Select state</option>
+                </option>
+                <option>Alabama</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Iowa</option>
+                <option>Virginia</option>
+            </select>
+        </div>
+        <div>
+            ZIP code<br>
+            <input class="address" type="text" pattern="\d{5}" required />
+        </div>
+        Primary phone number<br>
+        <input type="text" name="phone" pattern="[(]?\d{3}[)]?(\s{1})?\d{3}-?\d{4}" required />
+        <label>
+            <input type="radio" name="phone-type" value="mobile" required />Mobile phone</label>
+        <label>
+            <input type="radio" name="phone-type" value="home" />Home phone</label>
+        <br />
+        Email address<br>
+        <input type="text" name="email" pattern="^\S+@\S+\.\S+$" required />
+        Date of birth<br>
+        <input type="text" name="dob" pattern="[0-3][0-9]\/[0-3][0-9]\/[12][09]\d{2}" required />
+
+        <div class="center"><button type="submit">Submit</button></div>
+
+
+
+
+
+
+    </form>
+</body>
+
+</html>

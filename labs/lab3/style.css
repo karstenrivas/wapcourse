@@ -1,0 +1,36 @@
+form {
+  width: 500px;
+  margin: auto;
+}
+
+div {
+  display: inline;
+  width: 33%;
+  float: left;
+  box-sizing: border-box;
+}
+div input[type='text'],
+select {
+  width: 90%;
+}
+
+input[type='text'] {
+  display: block;
+
+  width: 100%;
+}
+input {
+  margin-bottom: 15px;
+}
+
+.center {
+  text-align: center;
+  width: 100%;
+}
+button[type='submit'] {
+  font-size: 18px;
+  color: white;
+  padding: 5px;
+  background-color: rgba(27, 64, 230, 0.671);
+  width: 300px;
+}
