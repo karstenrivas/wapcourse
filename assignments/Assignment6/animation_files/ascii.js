@@ -23,7 +23,7 @@ var intervalSpeed;
 var animationText;
 function start() {
     let textarea = document.getElementById("text");
-    animationText = textarea.innerHTML
+    animationText = textarea.value;
     setTimer();
     enableStartButton(false);
 
@@ -38,7 +38,7 @@ function setTimer() {
     intervalId = setInterval(() => {
         if (index == animationArray.length)
             index = 0;
-        textarea.innerHTML = animationArray[index];
+        textarea.value = animationArray[index];
         index++;
     }, intervalSpeed );
 
@@ -48,14 +48,14 @@ function setTimer() {
 function stop() {
     clearInterval(intervalId);
     let textarea = document.getElementById("text");
-    textarea.innerHTML = animationText;
+    textarea.value = animationText;
     enableStartButton(true);
 }
 
 function onChangeAnimation() {
     let textarea = document.getElementById("text");
     let animationDropdown = document.getElementById("animation");
-    textarea.innerHTML = ANIMATIONS[animationDropdown.value];
+    textarea.value = ANIMATIONS[animationDropdown.value];
 }
 
 function onChangeSize() {
