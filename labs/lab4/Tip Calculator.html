@@ -9,16 +9,22 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<script>
-		function calcTip() {
-			var subtotalElem = document.getElementById('subtotal');
-			var tipElem = document.getElementById("tip");
-			var totalElem = document.getElementById('total');
+		var com = {};
+		if (!com.methods) {
+			com.methods = {
+				calcTip: function () {
+					"use strict";
+					var subtotalElem = document.getElementById('subtotal');
+					var tipElem = document.getElementById("tip");
+					var totalElem = document.getElementById('total');
 
-			var subtotal = parseFloat(subtotalElem.value)
-			var tip = subtotal * tipElem.value / 100;
-			var total = parseFloat(subtotal + tip);
-			totalElem.innerHTML = '$' + total;
-		}
+					var subtotal = parseFloat(subtotalElem.value)
+					var tip = subtotal * tipElem.value / 100;
+					var total = parseFloat(subtotal + tip);
+					totalElem.innerHTML = '$' + total;
+				}
+			}
+		};
 
 	</script>
 
@@ -43,7 +49,7 @@
 	</div>
 
 	<div>
-		<button id="btn" onclick="calcTip();">Calculate Tip</button>
+		<button id="btn" onclick="com.methods.calcTip();">Calculate Tip</button>
 	</div>
 
 	<hr>
