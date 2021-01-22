@@ -1,5 +1,5 @@
 (function () {
-    const BASE_URL = "http://jsonplaceholder.typicode.com";
+    const BASE_URL = "https://jsonplaceholder.typicode.com";
     const USERS_URL = "/users/";
     const POSTS_URL = "/posts?userId=";
     const COMMENTS_URL = "/comments?postId=";
