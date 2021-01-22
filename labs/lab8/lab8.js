@@ -33,8 +33,15 @@ var module = (function () {
         this.applyBrake = function (val) { speed -= val; };
         this.speedup = function (val) { speed += val; };
     }
+
+    function MountainBike() {
+        Bike.call(this);
+        this.gear = 1;
+    }
+    MountainBike.prototype.setGear = function (val) { gear = val };
+   
     
-    return { createBicyclePrototype, createMountainBikePrototype, start, Bike };
+    return { createBicyclePrototype, createMountainBikePrototype, start, Bike, MountainBike };
 })();
         
 
@@ -66,6 +73,8 @@ window.onload = function () {
     console.log("----using constructor")
     let otherBike = new module.Bike();
     console.log(otherBike);
+    let otherMountainBike = new module.MountainBike();
+    console.log(otherMountainBike);
 
 
 }
