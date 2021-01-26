@@ -1,0 +1,13 @@
+div {
+  border: 2px solid black;
+  margin: 0px 15px;
+  float: left;
+
+  text-align: center;
+}
+div:first-of-type {
+  margin-right: 100px;
+}
+div~span {
+  color: blueviolet;
+}
